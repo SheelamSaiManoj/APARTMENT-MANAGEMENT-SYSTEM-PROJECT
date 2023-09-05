@@ -1,0 +1,12 @@
+<%- include("header") -%>
+
+<%    optionsList.forEach(function(options) { %>
+        <form action="/option" method="post">
+            <div>
+                <input type="checkbox" name="checkbox" value="<%=options.option%>" onChange="this.form.submit()">
+                <p><%=  options.option  %></p>
+            </div>
+        </form>
+<%   }) %>
+ 
+<%- include("footer") -%>

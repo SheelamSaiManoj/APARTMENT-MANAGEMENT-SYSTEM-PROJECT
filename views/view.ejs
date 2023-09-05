@@ -1,0 +1,13 @@
+<%- include("header") -%>
+
+<%    personsList.forEach(function(persons) { %>
+    <tr>
+        <td><%=  persons.name  %></td>
+        <td><%=  persons.flat_no  %></td>
+        <td><%=  persons.due  %></td>
+    </tr>
+    <br>
+ 
+<%   }) %>
+
+<%- include("footer") -%>
