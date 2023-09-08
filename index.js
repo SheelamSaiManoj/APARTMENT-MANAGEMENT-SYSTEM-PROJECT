@@ -103,9 +103,14 @@ app.post("/",function(req,res){
 
 })
 
+app.post("/options",function(req,res){
+
+    res.render("options");
+})
+
 app.post("/option",function(req,res){
     
-    const optionName=req.body.checkbox
+    const optionName=req.body.btn;
     if (optionName==="View"){
         Person.find({}).then(function(foundPersons){
             res.render("view",{personsList:foundPersons})
